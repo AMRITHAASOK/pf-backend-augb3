@@ -20,6 +20,7 @@ pfServer.use(cors())
 pfServer.use(express.json())//Returns middleware that only parses json
 pfServer.use(appMiddleware)
 pfServer.use(router)
+pfServer.use('/uploads',express.static('./uploads')) //image exporting to frontend 
 //port creation
 const PORT = 4000 || process.env.PORT
 

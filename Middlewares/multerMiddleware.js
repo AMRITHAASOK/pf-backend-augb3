@@ -8,7 +8,6 @@ const storage = multer.diskStorage({
     //create a file name
     filename:(req,file,callback) => {
         const filename =  `image-${Date.now()}-${file.originalname}`
-        //forgot to add
         callback(null,filename)
     }
 })

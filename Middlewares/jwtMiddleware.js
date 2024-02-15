@@ -12,9 +12,7 @@ const jwtMiddleware = (req,res,next) => {
     const tokenVerification = jwt.verify(token,'superkey2024')
     console.log(tokenVerification);
     req.payload = tokenVerification.userId 
-    console.log('multer');
     next();
-    console.log("after multer");
     }
     catch(err){
         res.status(401).json("Authorization failed....please login again...",)
